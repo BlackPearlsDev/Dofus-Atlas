@@ -9,7 +9,7 @@ function Home() {
         <main className='main-home'>
             <h2>Bienvenue sur Dofus Atlas</h2>
             <p>Votre compagnon de jeu à ne pas manquer</p>
-            <p>Retrouvez des informations sur les items, almaxas etc</p>
+            <p>Retrouvez des informations sur les items, almanax etc</p>
             {/* <p>Utilisation de l'API: <a href="https://docs.dofusdu.de" target='_blank' rel='noreferrer'>dofusdu</a>.</p> */}
             <div className="artwork-pos">
                 <img src={artwork1} alt="Personnage de Dofus" />
