@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(173, 255, 4, 0.8);
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-left: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    color: rgba(173, 255, 4, 0.9);
+    text-decoration: overline;
+}
+
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* START HOME PAGE */
+.main-home {
+    text-align: center;
+    padding: 0;
+}
+
+.main-home p {
+    margin: 1rem 0;
+}
+
+.main-home p a {
+    color: rgb(150, 255, 0);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-home p a:hover {
+    font-weight: 700;
+}
+
+.artwork-pos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.artwork-pos img {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+}
+
+.artwork-pos :nth-child(2) {
+    transform: scaleX(-1);
+}
+
+.artwork-pos .smoke {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+    height: 350px;
+    width: 100%;
+    background-image: url('../assets/img/smoke.png');
+    background-position: left top;
+    background-repeat: repeat-x;
+    -webkit-animation: smoke 25s linear infinite;
+    animation: smoke 25s linear infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0.6;
+}
+/* END HOME PAGE */
+
+/* START ALMANAX PAGE */
+.almanax-pos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.almanax-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(173, 255, 4, 0.9);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.almanax-card:hover {
+    box-shadow: 0 0 1rem rgba(173, 255, 4, 0.9);
+    transform: scale(1.03);
+}
+
+.almanax-card h3 {
+    background-color: rgba(173, 255, 4, 0.9);
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.almanax-card img {
+    width: 20%;
+    padding: 1rem;
+}
+
+.almanax-item {
+    font-weight: 700;
+}
+
+.div-separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ebebeb;
+    margin: 2rem 0;
+}
+
+.almanax-type {
+    font-weight: 700;
+    color: rgba(140, 255, 4, 0.9);
+}
+
+.almanax-txt-desc {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem;
+    height: 10rem;
+}
+
+.almanax-box-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.almanax-box-error > * {
+    margin: 1rem 0;
+}
+
+.btn-almanax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(173, 255, 4, 0.9);
+    border: transparent;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-almanax:hover {
+    background-color: rgba(173, 255, 4, 0.7);
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 0.75rem rgba(173, 255, 4, 0.7));
+}
+/* END ALMANAX PAGE */
+
+/* START EQUIPEMENT PAGE */
+
+.autocomplete-pos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.autocomplete-equipement {
+    font-size: 1.8rem;
+    border-radius: 5px;
+}
+
+.autocomplete-equipement input {
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 1px dashed rgba(173, 255, 4, 0.9);
+    border-radius: 5px;
+    padding: 1rem !important;
+    color: white;
+}
+
+.autocomplete-equipement div label {
+    display: none;
+}
+
+.autocomplete-equipement fieldset, .autocomplete-equipement fieldset legend {
+    display: none;
+}
+
+/* override mui css */
+.autocomplete-equipement div button svg {
+    color: white;
+}
+
+.btn-search {
+    color: white !important;
+    background-color: rgba(173, 255, 4, 0.9) !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    border: transparent;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.item-pos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.item-pos article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.item-pos article h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.item-pos article h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.item-head-position {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.item-head-infos {
+    width: 80%;
+}
+
+.item-head-img {
+    width: 20%;
+    border: 2px solid #2e2924;
+    background-color: #4a433b;
+}
+
+.item-pos article img {
+    width: 100%;
+}
+
+.txt-green-itemset {
+    color: rgba(173, 255, 4, 0.9);
+}
+
+.h4-desc {
+    margin-top: 2rem;
+}
+
+.item-description {
+    line-height: 1.5;
+}
+
+.btn-recipe {
+    padding: 0.2rem 1rem !important;
+    display: block !important;
+    color: white !important;
+    background-color: rgba(173, 255, 4, 0.9) !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    margin: 3rem 0 1rem 0 !important;
+}
+
+.btn-recipe:hover {
+    background-color: white !important;
+    color: rgba(173, 255, 4, 1) !important;
+    font-weight: 700 !important;
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 0.5rem rgba(173, 255, 4, 0.7));
+}
+
+.recipe-pos ul {
+    list-style: none;
+}
+
+.recipe-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.recipe-line img {
+    width: 5% !important;
+    margin-right: 1rem;
+}
+
+.recipe-line a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.recipe-line a:hover {
+    color: rgba(173, 255, 4, 0.9);
+}
+
+/* END EQUIPEMENT PAGE */
+
+/* START RESSOURCES DETAILS PAGE */
+.ressource-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    color: white;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.spinner-pos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* END RESSOURCES DETAILS PAGE */
+
+/* START MOUNT PAGE */
+.mount-pos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-line {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(173, 255, 4, 0.9);
+}
+
+.mount-card img {
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+}
+
+.mount-card p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* END MOUNT PAGE */
+
+/* START NEWS PAGE */
+.list-twitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.list-twitter ul {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: 1px solid rgba(173, 255, 4, 0.9);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.list-twitter ul li {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.list-twitter ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.list-twitter ul li a:hover {
+    color: rgba(173, 255, 4, 0.9);
+}
+
+/* END NEWS PAGE */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(173, 255, 4, 0.8);
+    border-top: 1px solid #ebebeb;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+footer p a {
+    color: white;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+
+footer p a:hover {
+    color: rgba(173, 255, 4, 0.9);
+}
+
+/* MISC */
+.txt-red {
+    color: #ff0000;
+}
+
+.txt-align {
+    text-align: center;
+}
+
+.txt-margin {
+    margin: 3rem 0 2rem 0;
+}
+
+@-webkit-keyframes smoke {
+    0% {
+        background-position: left -1920px top
+    }
+
+    100% {
+        background-position: left 1920px top
+    }
+}
+
+@keyframes smoke {
+    0% {
+        background-position: left -1920px top
+    }
+
+    100% {
+        background-position: left 1920px top
+    }
+}
